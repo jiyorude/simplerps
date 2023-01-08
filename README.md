@@ -8,7 +8,7 @@ The core concept of the game was based on the assignment found in the excellent 
 
 - Added a custom HTML and CSS Design to the game.
 - Implemented a flex-based design; front-end was designed with mobile-first in mind.
-- Changed the browser-styled alerts to JavaScript modals.
+- Changed the browser-styled alerts to Bootstrap modals.
 - Added various CSS animations
 - Code adjustments and improvements
 
