@@ -12,6 +12,15 @@ The core concept of the game was based on the assignment found in the excellent 
 - Added various CSS animations
 - Code adjustments and improvements
 
+### Current status:
+
+| Element        | Status  |
+| -------------- | :-----: |
+| HTML           | **0%**  |
+| CSS            | **0%**  |
+| CSS Animations | **0%**  |
+| JS             | **40%** |
+
 ### Credits:
 
 - [Dave Gray's JavaScript course](https://youtu.be/EfAl9bwzVZk?t=3877)
