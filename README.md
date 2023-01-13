@@ -9,7 +9,7 @@ The core of this game was based and inspired on the assignment found in the exce
 
 - Custom, flex-based front-end
 - Modals replace JavaScript alerts and contain buttons to play; no typing required.
-- Various CSS animations
+- Added animations and transitions
 - JavaScript code adjustments and general improvements
 
 ---
