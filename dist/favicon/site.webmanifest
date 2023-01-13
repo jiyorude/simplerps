@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "SRPS - simple Rock Paper and Scissors Game",
+    "short_name": "SRPS",
     "icons": [
         {
             "src": "/favicon/android-chrome-192x192.png",
