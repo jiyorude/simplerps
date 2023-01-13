@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #131313;
+  --yellow: #ffe500;
+  --white: #fafafa;
+  --off-white: #faf9f6;
+  --title-font: 700;
+  --semi-title-font: 600;
+  --emphasis-font: 500;
+  --text-font: 400;
+  --text-font-two: 300;
+}
+
+.background {
+  background-color: var(--black);
+}
