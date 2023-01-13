@@ -1,4 +1,4 @@
-<img align="center" src="dist/git/srps-git2.png" alt="srps logo">
+<img align="center" src="dist/git/srps-git-2.png" alt="srps logo">
 
 <h3 align="center">simpleRPS</h3>
 <h4 align="center">Simple JavaScript Rock, Paper, Scissors Game.</h4>
