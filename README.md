@@ -15,6 +15,4 @@ The core of this game was based and inspired on the assignment found in the exce
 
 ---
 
-<h3 align="center">Credits</h3>
-
 - [Dave Gray's JavaScript course](https://youtu.be/EfAl9bwzVZk?t=3877)
