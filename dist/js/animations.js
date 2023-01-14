@@ -1,5 +1,3 @@
-// SRPS ANIMATIONS
-
 let gameInit = anime.timeline({
   easing: "easeInOutExpo",
   duration: 3000,
@@ -52,3 +50,7 @@ gameInit.finished.then(function () {
     scale: [1, 1.25],
   });
 });
+
+let startGame = document.querySelector(".buttondiv");
+
+startGame.addEventListe;
