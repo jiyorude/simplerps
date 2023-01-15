@@ -1,3 +1,7 @@
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("ANIMATIONS READY");
+});
+
 let gameInit = anime.timeline({
   easing: "easeInOutExpo",
   duration: 3000,
@@ -83,18 +87,18 @@ gameStart = () => {
 };
 
 document.querySelector("#rock").onclick = function () {
-  loading();
+  loadResult();
 };
 
 document.querySelector("#paper").onclick = function () {
-  loading();
+  loadResult();
 };
 
 document.querySelector("#scissors").onclick = function () {
-  loading();
+  loadResult();
 };
 
-loading = () => {
+loadResult = () => {
   let loadAni = anime.timeline({
     easing: "easeInOutExpo",
     direction: "forwards",
@@ -119,6 +123,7 @@ loading = () => {
     let resultAni = anime.timeline({
       easing: "easeInOutExpo",
       direction: "forwards",
+      duration: 700,
     });
 
     resultAni
@@ -136,46 +141,85 @@ loading = () => {
       .add({
         targets: "#playerResult",
         opacity: [0, 1],
-        delay: 500,
+        delay: 300,
       })
       .add({
         targets: "#cpuResult",
         opacity: [0, 1],
-        delay: 500,
+        delay: 300,
       })
-      .add(
-        {
-          targets: "#finalResult",
-          opacity: [0, 1],
-          delay: 1500,
-        },
-        "-=1500"
-      )
+      .add({
+        targets: "#finalResult",
+        opacity: [0, 1],
+        delay: 200,
+      })
       .add({
         targets: "#outcome",
         opacity: [0, 1],
-        delay: 1500,
+        delay: 200,
+      })
+      .add({
+        targets: "#returnHome, #playAgain",
+        opacity: [0, 1],
+        delay: 200,
       });
-  });
-};
 
-document.querySelector("#returnHome").onclick = function () {
-  fadeToBlack();
+    let flashAni = anime.timeline({
+      direction: "forwards",
+      loop: true,
+      easing: "steps(1)",
+    });
+
+    flashAni.add({
+      targets: "#playAgain",
+      delay: 5000,
+      border: [
+        { value: "2px solid var(--yellow" },
+        { value: "2px solid var(--black", duration: 200 },
+        { value: "2px solid var(--yellow)", duration: 200 },
+        { value: "2px solid var(--black)", duration: 200 },
+        { value: "2px solid var(--yellow)", duration: 200 },
+      ],
+    });
+
+    resultAni.finished.then(flashAni);
+  });
 };
 
 let resetButton = document.getElementById("returnHome");
 let activateResetButton = (resetButton.onclick = function () {
   let fadeLine = anime.timeline({
-    direction: "forwards",
-    loop: false,
+    duration: 1000,
   });
 
-  fadeLine.add({
-    targets: ".result, #srps-div, #srps-tag, #code-tag, .srps-tag, .code-text, .srps-logo, #startGame, .buttondiv",
-    opacity: [1, 0],
-  });
+  fadeLine
+    .add({
+      targets: ".result, #srps-div, #srps-tag, #code-tag, .srps-tag, .code-text, .srps-logo, #startGame, .buttondiv",
+      opacity: [{ value: 1 }, { value: 0, duration: 600 }],
+      display: [{ value: "block" }, { value: "none", duration: 1 }],
+    })
+    .add({
+      targets: "main",
+      backgroundColor: "black",
+    });
 
   setTimeout(() => {
     window.location.reload();
-  }, 2000);
+  }, 1200);
+});
+
+let playButton = document.getElementById("playAgain");
+let activatePlay = (playButton.onclick = function () {
+  let playAgainTL = anime.timeline({
+    duration: 500,
+    direction: "forwards",
+  });
+
+  // TODO HERE!!!
+  // Move the result bar out of the way and bring the playbar back in.
+
+  playAgainTL.add({
+    targets: "h1, #rock, #paper, #scissors",
+    marginTop: [{ value: -2000 }, { value: 0, duration: 100 }],
+  });
 });

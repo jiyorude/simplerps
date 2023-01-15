@@ -162,10 +162,12 @@ h2 {
 
 .result {
   position: absolute;
-  border: 3px solid green;
+  border: 2px solid var(--yellow);
   width: 400px;
-  height: 200px;
-  margin-top: -20px;
+  height: 220px;
+  align-items: center;
+  align-content: center;
+  margin-top: -2000px;
 }
 
 #playerResult {
@@ -174,6 +176,7 @@ h2 {
   text-align: center;
   text-transform:uppercase;
   font-size: 22px;
+  margin-top: 10px;
 }
 
 #cpuResult {
@@ -227,6 +230,7 @@ h2 {
   margin-left: 80px;
   margin-right: 10px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 #playAgain {
