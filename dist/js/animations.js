@@ -211,15 +211,20 @@ let activateResetButton = (resetButton.onclick = function () {
 let playButton = document.getElementById("playAgain");
 let activatePlay = (playButton.onclick = function () {
   let playAgainTL = anime.timeline({
-    duration: 500,
+    duration: 1300,
     direction: "forwards",
   });
 
-  // TODO HERE!!!
-  // Move the result bar out of the way and bring the playbar back in.
-
-  playAgainTL.add({
-    targets: "h1, #rock, #paper, #scissors",
-    marginTop: [{ value: -2000 }, { value: 0, duration: 100 }],
-  });
+  playAgainTL
+    .add({
+      targets: ".result",
+      opacity: [{ value: 1 }, { value: 0, duration: 700 }],
+      marginTop: [{ value: -40 }, { value: -40, duration: 400 }, { value: -2000, duration: 200 }],
+    })
+    .add({
+      targets: "h1, #rock, #paper, #scissors",
+      marginTop: [{ value: -2000 }, { value: 0, duration: 100 }],
+      opacity: [{ value: 0 }, { value: 0, duration: 500, delay: 200 }, { value: 1, duration: 500, delay: 100 }],
+      margin: [{ value: 5, duration: 500, delay: 100 }],
+    });
 });
