@@ -160,26 +160,95 @@ h2 {
   pointer-events: none;
 }
 
-#patiencebox {
+.result {
   position: absolute;
-  margin-top: -2000px; /*Deze moet van -2000 naar -40*/
-
-}
-.patience {
-  border: 3px solid red;
-}
-
-.loading {
-  width: 200px;
-  height: 30px;
-  margin-left: 40px;
-  border: 5px solid green;
+  border: 3px solid green;
+  width: 400px;
+  height: 200px;
+  margin-top: -20px;
 }
 
-.loadingblock {
-  width: 20px;
-  height: 20px;
+#playerResult {
+  color: var(--yellow);
+  font-family: Rubik;
+  text-align: center;
+  text-transform:uppercase;
+  font-size: 22px;
+}
+
+#cpuResult {
+  color: var(--yellow);
+  font-family: Rubik;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+#finalResult {
+  color: var(--yellow);
+  font-family: Rubik;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#outcome {
+  color: var(--yellow);
+  font-family: Rubik;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 20px
+}
+
+#choiceOne {
+  font-weight: 700;
+}
+
+#choiceTwo {
+  font-weight: 700;
+}
+
+#returnHome {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 3px;
+  border: 2px solid var(--yellow);
+  background-color: transparent;
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--yellow);
+  transition: 0.2s;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 80px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+#playAgain {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 3px;
+  border: 2px solid var(--yellow);
+  background-color: transparent;
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--yellow);
+  transition: 0.2s;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+#returnHome:hover, #playAgain:hover {
+  transform: scale(1.25);
+  border: 2px solid var(--black);
+  cursor: pointer;
   background-color: var(--yellow);
-
+  color: var(--black);
 }
-

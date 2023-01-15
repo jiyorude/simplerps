@@ -84,7 +84,6 @@ gameStart = () => {
 
 document.querySelector("#rock").onclick = function () {
   loading();
-
 };
 
 document.querySelector("#paper").onclick = function () {
@@ -99,32 +98,84 @@ loading = () => {
   let loadAni = anime.timeline({
     easing: "easeInOutExpo",
     direction: "forwards",
-    duration: 1200,
+    duration: 450,
   });
 
   loadAni
-    .add(
-      {
-        targets: "#rock, #paper, #scissors",
-        opacity: [1, 0],
-      },
-     300
-    )
-    .add(
-      {
-        targets: "h1",
-        opacity: [1, 0],
-      },
-      300
-    )
     .add({
-      targets: "#rock, #paper, #scissors, h1",
-      marginTop: [-2000],
-      display: ["none"],
-      pointerEvents: ["none"],
+      targets: "#rock, #paper, #scissors",
+      opacity: [1, 0],
+    })
+    .add({
+      targets: "h1",
+      opacity: [1, 0],
+    })
+    .add({
+      targets: "h1, #rock, #paper, #scissors",
+      marginTop: -2000,
     });
+
+  loadAni.finished.then(function () {
+    let resultAni = anime.timeline({
+      easing: "easeInOutExpo",
+      direction: "forwards",
+    });
+
+    resultAni
+      .add({
+        targets: ".result",
+        marginTop: -2000,
+        display: "none",
+      })
+      .add({
+        targets: ".result",
+        opacity: [0, 1],
+        display: "block",
+        marginTop: -40,
+      })
+      .add({
+        targets: "#playerResult",
+        opacity: [0, 1],
+        delay: 500,
+      })
+      .add({
+        targets: "#cpuResult",
+        opacity: [0, 1],
+        delay: 500,
+      })
+      .add(
+        {
+          targets: "#finalResult",
+          opacity: [0, 1],
+          delay: 1500,
+        },
+        "-=1500"
+      )
+      .add({
+        targets: "#outcome",
+        opacity: [0, 1],
+        delay: 1500,
+      });
+  });
 };
 
-loadAni.finished.then(function () {
-  
+document.querySelector("#returnHome").onclick = function () {
+  fadeToBlack();
+};
+
+let resetButton = document.getElementById("returnHome");
+let activateResetButton = (resetButton.onclick = function () {
+  let fadeLine = anime.timeline({
+    direction: "forwards",
+    loop: false,
+  });
+
+  fadeLine.add({
+    targets: ".result, #srps-div, #srps-tag, #code-tag, .srps-tag, .code-text, .srps-logo, #startGame, .buttondiv",
+    opacity: [1, 0],
+  });
+
+  setTimeout(() => {
+    window.location.reload();
+  }, 2000);
 });
