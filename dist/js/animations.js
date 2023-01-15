@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-  console.log("ANIMATIONS READY");
+  console.log("FRONTEND READY");
 });
 
 let gameInit = anime.timeline({
