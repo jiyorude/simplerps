@@ -8,7 +8,7 @@
 The core of this game was based and inspired on the assignment found in the excellent JavaScript course provided by Dave Gray. This version of the game is based on the first assignment, where a RPS game was made based on JavaScript alerts. simpleRPS adds a couple of QoL-improvements to the table, such as:
 
 - Custom, flex-based front-end
-- Modals replace JavaScript alerts and contain buttons to play; no typing required.
+- Clickable buttons are used to play; no typing required.
 - Added animations and transitions
 - JavaScript code adjustments and general improvements
 

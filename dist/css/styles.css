@@ -28,6 +28,7 @@ main {
   height: 100vh;
   width: 100vw;
   background-color: var(--black);
+  position: relative;
 }
 
 .flexbox {
@@ -40,22 +41,25 @@ main {
   flex-direction: column;
 }
 
-/*NOTE: THIS ONE IS CURRENTLY TURNED OFF WHILE DESIGNING THE PROMPT*/
 .buttondiv {
   width: 305px;
   border: 3px solid red;
-  display: none;
+  position: absolute;
+  margin-top: -2000px;
 }
 
-h1 {
+h1,
+h2 {
   font-family: Rubik;
   font-weight: 400;
   font-size: 16px;
   color: var(--yellow);
   opacity: 1;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-button {
+#startGame {
   width: 300px;
   height: 50px;
   border-radius: 10px;
@@ -68,7 +72,7 @@ button {
   transition: 0.2s;
 }
 
-button:hover {
+#startGame:hover {
   border: 2px solid var(--black);
   cursor: pointer;
   background-color: var(--yellow);
@@ -121,26 +125,61 @@ button:hover {
 }
 
 #choiceprompt {
-  position: absolute;
-  border: 2px solid red;
+  opacity: 0;
+  margin-top: -40px;
+  margin-left: -15px;
 }
 
-#rock {
-  width: 100px;
-  margin: 10px;
-}
-
-#paper {
-  width: 100px;
-  margin: 10px;
-}
-
+#rock,
+#paper,
 #scissors {
   width: 100px;
+  height: 50px;
   margin: 10px;
+  border-radius: 3px;
+  border: 2px solid var(--yellow);
+  background-color: transparent;
+  font-family: Rubik;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--yellow);
+  transition: 0.2s;
 }
 
-h1 {
-  text-align: center;
-  text-transform: uppercase;
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+  transform: scale(1.25);
+  border: 2px solid var(--black);
+  cursor: pointer;
+  background-color: var(--yellow);
+  color: var(--black);
 }
+
+#prompt-choice {
+  pointer-events: none;
+}
+
+#patiencebox {
+  position: absolute;
+  margin-top: -2000px; /*Deze moet van -2000 naar -40*/
+
+}
+.patience {
+  border: 3px solid red;
+}
+
+.loading {
+  width: 200px;
+  height: 30px;
+  margin-left: 40px;
+  border: 5px solid green;
+}
+
+.loadingblock {
+  width: 20px;
+  height: 20px;
+  background-color: var(--yellow);
+
+}
+
