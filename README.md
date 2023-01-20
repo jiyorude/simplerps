@@ -1,5 +1,5 @@
 <p align="center">
-<img src="/git/srps-git-2.png" alt="srps logo">
+<img src="/.srps-git-2.png" alt="srps logo">
 </p>
 
 <h3 align="center">simpleRPS</h3>
