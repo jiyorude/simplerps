@@ -50,7 +50,6 @@ setResult = () => {
     document.getElementById("finalResult").innerHTML = "...Guess what?";
     document.getElementById("outcome").innerHTML = "It's a tie!";
   } else if (playerChoice === "rock" && cpuChoice === "paper") {
-    let verb;
     document.getElementById("finalResult").innerHTML = `${cpuChoice} ${verbOne} ${playerChoice}.`;
     document.getElementById("outcome").innerHTML = "The Computer Wins.";
   } else if (playerChoice === "paper" && cpuChoice === "scissors") {
