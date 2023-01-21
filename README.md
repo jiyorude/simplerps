@@ -5,12 +5,14 @@
 <h3 align="center">simpleRPS</h3>
 <h4 align="center">Simple JavaScript Rock, Paper, Scissors Game.</h4>
 
-The core of this game was based and inspired on the assignment found in the excellent JavaScript course provided by Dave Gray. simpleRPS expands upon that initial code and adds a couple of QoL-improvements, such as:
+This game was inspired by the assignment found in the excellent JavaScript course provided by Dave Gray. simpleRPS expands upon the initial code and adds various QoL-improvements, such as:
 
-- Custom, flex-based front-end
+- Custom, flex-based front-end.
 - Clickable buttons are used to play; no typing required.
-- Added animations and transitions
-- JavaScript code adjustments and improvements
+- Added animations and transitions.
+- Many JavaScript code adjustments and improvements.
+
+A live-environment of the game can be found [here](https://www.github.io/jiyorude/simpleRPS)
 
 ---
 

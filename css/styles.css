@@ -258,9 +258,24 @@ h2 {
   color: var(--black);
 }
 
-/* Media Queries */
+/* Phones with smaller resolutions such as the Samsung Fold*/
+@media screen and (max-width: 384px) and (max-height: 799px) and (orientation: portrait) {
+  .result {
+    width: 260px !important;
+  }
 
-@media screen and (max-width: 375px) and (orientation: portrait) {
+  .srps-tag {
+    font-size: 10px !important;
+  }
+
+  .code-text {
+    right: 100px;
+    font-size: 8px !important;
+  }
+}
+
+/* Mainstream phones, such as samsung S/A lines, iPhones from 4, 5 till 12 pro*/
+@media screen and (max-width: 385px) and (max-height: 820px) and (orientation: portrait) {
   #rock,
   #paper,
   #scissors {
@@ -272,28 +287,18 @@ h2 {
     height: 210px;
   }
 
-  html {
-
-    background-color: var(--black);
-    }
-
-    main {
-      background-color: var(--black);
-    }
-
- 
   #playAgain {
     width: 75px;
-    height: 35px;
+    height: 45px;
     margin: 5px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   #returnHome {
     width: 75px;
-    height: 35px;
+    height: 45px;
     margin: 5px;
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 50px;
     margin-top: 20px;
   }
@@ -325,6 +330,71 @@ h2 {
   }
 
   #srps-tag {
-    right: 170px;
+    right: 100px;
+  }
+
+  .srps-tag {
+    right: 100px;
+    font-size: 12px;
+  }
+
+  .code-text {
+    right: 100px;
+    font-size: 10px;
+  }
+
+  #code-text {
+    right: 100px;
+  }
+
+  #playerResult {
+    font-size: 18px;
+  }
+
+  #cpuResult {
+    font-size: 18px;
+  }
+
+  #outcome {
+    font-size: 12px;
+  }
+
+  #finalResult {
+    font-size: 12px;
+  }
+}
+
+/* for Microsoft Lumia phones */
+@media screen and (orientation: landscape) and (max-width: 640px) and (max-height: 360px) {
+  .result {
+    width: 300px;
+    height: 210px;
+  }
+
+  #playAgain {
+    width: 75px;
+    height: 45px;
+    margin: 5px;
+    font-size: 16px;
+  }
+
+  #returnHome {
+    width: 75px;
+    height: 45px;
+    margin: 5px;
+    font-size: 16px;
+    margin-left: 65px;
+    margin-top: 20px;
+  }
+}
+
+/* For phones with high height-resolutions */
+@media screen and (orientation: portrait) and (min-width: 386px) and (max-height: 920px) {
+  .result {
+    width: 335px;
+  }
+
+  #returnHome {
+    margin-left: 50px;
   }
 }
