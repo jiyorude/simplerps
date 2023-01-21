@@ -12,7 +12,7 @@ This game was inspired by the assignment found in the excellent JavaScript cours
 - Added animations and transitions.
 - Many JavaScript code adjustments and improvements.
 
-A live-environment of the game can be found [here](https://www.github.io/jiyorude/simpleRPS)
+A live-environment of the game can be found [here](https://jiyorude.github.io/simpleRPS/)
 
 ---
 
