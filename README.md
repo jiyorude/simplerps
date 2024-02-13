@@ -12,4 +12,5 @@
 * Added animations and transitions.
 * Many JavaScript code adjustments and improvements.
 
+
 * Licensed under MIT
